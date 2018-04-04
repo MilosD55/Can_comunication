@@ -24,7 +24,7 @@ unsigned char incByte;
 
 char inData[80];
 char flightdata[80];
-int value,msg_length;
+char value,msg_length;
 byte checksum = 0;
 byte bytesread = 0;
 char pniz[8];
@@ -80,7 +80,7 @@ void loop() {
     msg_length = ParseMessage(tmp, msg);
     
    
-     CAN0.sendMsgBuf(0xFF,0,3,msg);
+     CAN0.sendMsgBuf(0xFF,0,3,msg_lenght);
   
       Serial.println("message sent");
 
