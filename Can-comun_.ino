@@ -76,77 +76,7 @@ void loop() {
     
     Serial.print("Duzina poruke je: ");
     Serial.println(br);
-   /* Serial.print("Poruka je: ");
-    Serial.println(can_msg_tmp);*/
-     
- 
-    
-    
    
-  //can_msg[0]="/0";
-  /*for(int i=0;i<8;i++){
-   //Serial.print("usao");
-   // can_msg[i]=can_msg_tmp[i];
-  if ((can_msg_tmp[i] >= '0') && (can_msg_tmp[i] <= '9')) {
-            can_msg_tmp[i] = can_msg_tmp[i] - '0';
-          } else if ((can_msg_tmp[i] >= 'A') && (can_msg_tmp[i] <= 'F')) {
-            can_msg_tmp[i] = 10 + can_msg_tmp[i] - 'A';
-          }}*/
-  /*if(((can_msg_tmp[i] & B00001111 )   == 3 )|((can_msg_tmp[i] & B00001111)  == 4)){
-      can_msg_tmp[i]=can_msg_tmp[i] <<= 3;
-      can_msg_tmp[i]=can_msg_tmp[i] | can_msg_tmp[i+1] ;
-  }
-
-
-  }*/
-      
-  
-    
-  
-   
-   //while (bytesread < 12) {      
-/* if ((can_msg_tmp[i] >= '0') && (can_msg_tmp[i] <= '9')) {
-            can_msg[i] = can_msg_tmp[i] - '0';
-          } else if ((can_msg_tmp[i] >= 'A') && (can_msg_tmp[i] <= 'F')) {
-            can_msg[i] = 10 + can_msg_tmp[i] - 'A';
-          }
-
-          // Every two hex-digits, add byte to code:
-       if (bytesread & 1 == 1) {
-            // make some space for this hex-digit by
-            // shifting the previous hex-digit with 4 bits to the left:
-            can_msg[bytesread >> 1] = (can_msg_tmp[bytesread] | (tempbyte << 4));
-
-            if (bytesread >> 1 != 5) {                // If we're at the checksum byte,
-              checksum ^= can_msg[bytesread >> 1];       // Calculate the checksum... (XOR)
-            }
-          } else {
-           pniz[bytesread] = can_msg_tmp[bytesread];                           // Store the first hex digit first...
-          };
-
-          bytesread++;                                // ready to read next digit
-        } 
-       */
-
-    
-    /*if((can_msg_tmp[i]>='0')&&(can_msg_tmp[i]<='9'))
-    {
-      
-        can_msg[i]=can_msg_tmp[i];}
-    
-    //else i((can_msg_tmp[i]>='A')&&(can_msg_tmp[i]<='F')){
-      
-        can_msg[i]=can_msg_tmp[i];}
-  
-   Serial.print(can_msg[i]);
-   }
-    */
-
-
-
-    
-   /* for(int i=0;i<8;i++){
-      Serial.print(can_msg_tmp[i],HEX);*/
     msg_length = ParseMessage(tmp, msg);
     
    
