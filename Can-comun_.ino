@@ -7,7 +7,7 @@
 
 MCP_CAN CAN0(10);
 
-int msg[8];
+char msg[8];
 char tmp[64];
 char can_msg_tmp[16];
 int i=0;
@@ -80,7 +80,7 @@ void loop() {
     msg_length = ParseMessage(tmp, msg);
     
    
-     CAN0.sendMsgBuf(0xFF,0,3,msg_lenght);
+     CAN0.sendMsgBuf(0xFF,0,3,msg);
   
       Serial.println("message sent");
 
